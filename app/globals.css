@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 32 38% 97%; /* كريمي دافئ، مريح للعين */
+    --foreground: 20 40% 14%; /* بنّي إسبريسو غامق */
+
+    --card: 30 35% 99%;
+    --card-foreground: 20 40% 14%;
+
+    --popover: 30 35% 99%;
+    --popover-foreground: 20 40% 14%;
+
+    --primary: 24 45% 26%; /* بنّي قهوة غامق ومميز */
+    --primary-foreground: 32 38% 97%;
+
+    --secondary: 30 25% 92%; /* بيج فاتح دافئ */
+    --secondary-foreground: 20 40% 16%;
+
+    --muted: 30 20% 93%;
+    --muted-foreground: 25 15% 42%;
+
+    --accent: 28 65% 89%; /* كراميل فاتح */
+    --accent-foreground: 22 50% 22%;
+
+    --destructive: 9 60% 42%; /* أحمر طوبي دافئ */
+    --destructive-foreground: 32 38% 97%;
+
+    --success: 148 35% 30%; /* أخضر غابة دافئ (مطابقة) */
+    --success-foreground: 32 38% 97%;
+
+    --warning: 36 85% 47%; /* ذهبي/عنبري — لون توقيع مميز (فروقات) */
+    --warning-foreground: 24 40% 14%;
+
+    --border: 30 20% 86%;
+    --input: 30 20% 86%;
+    --ring: 24 45% 26%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 20 22% 8%; /* إسبريسو غامق جداً، شبه أسود */
+    --foreground: 32 30% 92%; /* كريمي دافئ */
+
+    --card: 20 20% 11%;
+    --card-foreground: 32 30% 92%;
+
+    --popover: 20 20% 11%;
+    --popover-foreground: 32 30% 92%;
+
+    --primary: 28 60% 58%; /* كراميل/توفي دافئ — يبرز فوق الخلفية الغامقة */
+    --primary-foreground: 20 30% 10%;
+
+    --secondary: 20 16% 16%;
+    --secondary-foreground: 32 25% 90%;
+
+    --muted: 20 16% 16%;
+    --muted-foreground: 28 12% 65%;
+
+    --accent: 26 40% 20%; /* برونزي غامق */
+    --accent-foreground: 30 65% 82%;
+
+    --destructive: 8 55% 52%;
+    --destructive-foreground: 30 25% 95%;
+
+    --success: 148 35% 45%;
+    --success-foreground: 20 30% 10%;
+
+    --warning: 38 80% 55%;
+    --warning-foreground: 22 40% 12%;
+
+    --border: 20 16% 20%;
+    --input: 20 16% 20%;
+    --ring: 28 60% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
